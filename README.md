@@ -4,6 +4,10 @@
 
 ## Made by: [Matt Sweeney](https://www.linkedin.com/in/sweeney-matt/)
 
+### [Trello Board](https://trello.com/b/5nSNxpUd/weather-or-not)
+
+### [Figma with Component Hierarhcy Diagram and ERD](https://www.figma.com/file/w6BoFPOl4QDWDJzLAOiZpx/Weather-Or-Not?node-id=0%3A1&t=BcHqcYUPKi91zsXQ-1)
+
 ## Description
 
 Weather Or Not is the app that acts as a clothing and accessory database that will also review the weather forecast for the day and help you determine weather or not you are prepared!
@@ -24,7 +28,6 @@ This site will be built using Django/Python on the backend and React, Javascript
 
 I will also be using Flowbite for as a technology I have never used. 
 
-### [Trello Board](https://trello.com/b/5nSNxpUd/weather-or-not)
 
 ## Models
 
