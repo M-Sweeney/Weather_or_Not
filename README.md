@@ -24,6 +24,8 @@ This site will be built using Django/Python on the backend and React, Javascript
 
 I will also be using Flowbite for as a technology I have never used. 
 
+### [Trello Board](https://trello.com/b/5nSNxpUd/weather-or-not)
+
 ## Models
 
 - User
@@ -44,8 +46,6 @@ I will also be using Flowbite for as a technology I have never used.
 ![image](assets/Wireframes.png)
 
 ![image](assets/ERD&CHD.png)
-
-### [Trello Board](https://trello.com/b/5nSNxpUd/weather-or-not)
 
 ## Post-MVP Ideas
 
