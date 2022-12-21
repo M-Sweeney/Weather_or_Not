@@ -1,4 +1,4 @@
-![image](https://tinypic.host/images/2022/11/30/Screenshot-2022-11-29-at-5.28.54-PM.png)
+![image](assets/banner.jpg)
 
 ## Weather Or Not
 
@@ -6,7 +6,7 @@
 
 ## Description
 
-Weather Or Not is the app that will review the weather forecast for the day and help you determine weather or not you are prepared!
+Weather Or Not is the app that acts as a clothing and accessory database that will also review the weather forecast for the day and help you determine weather or not you are prepared!
 
 Weather or not is going to be pulling from a [third-party API](https://open-meteo.com/en/docs) to show the forecast for the day. Based on this forecast it will recommend items from your closet to ensure you are prepared for all weather conditions you may encounter. 
 
@@ -21,6 +21,8 @@ Weather or not is going to be pulling from a [third-party API](https://open-mete
 ## Technologies Used
 
 This site will be built using Django/Python on the backend and React, Javascript and CSS on the frontend. The site will be using the below models and React components. Full CRUD operations (POST, GET, PUT, DELETE) will be implemented on at least one model.
+
+I will also be using Flowbite for as a technology I have never used. 
 
 ## Models
 
@@ -37,7 +39,11 @@ This site will be built using Django/Python on the backend and React, Javascript
 - Closet.jsx
 - Activities.jsx
 
-### [Figma](https://www.figma.com/file/w6BoFPOl4QDWDJzLAOiZpx/Weather-Or-Not?node-id=0%3A1&t=BcHqcYUPKi91zsXQ-1) with Component Hierarhcy Diagram and ERD
+### [Figma with Component Hierarhcy Diagram and ERD](https://www.figma.com/file/w6BoFPOl4QDWDJzLAOiZpx/Weather-Or-Not?node-id=0%3A1&t=BcHqcYUPKi91zsXQ-1)
+
+![image](assets/Wireframes.png)
+
+![image](assets/ERD&CHD.png)
 
 ### [Trello Board](https://trello.com/b/5nSNxpUd/weather-or-not)
 
