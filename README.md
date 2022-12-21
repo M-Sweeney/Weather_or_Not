@@ -37,13 +37,9 @@ This site will be built using Django/Python on the backend and React, Javascript
 - Closet.jsx
 - Activities.jsx
 
-### Figma
+### [Figma](https://www.figma.com/file/w6BoFPOl4QDWDJzLAOiZpx/Weather-Or-Not?node-id=0%3A1&t=BcHqcYUPKi91zsXQ-1) with Component Hierarhcy Diagram and ERD
 
-Link - https://www.figma.com/file/w6BoFPOl4QDWDJzLAOiZpx/Weather-Or-Not?node-id=0%3A1&t=BcHqcYUPKi91zsXQ-1
-
-### Trello Board
-
-Link - https://trello.com/b/5nSNxpUd/weather-or-not
+### [Trello Board](https://trello.com/b/5nSNxpUd/weather-or-not)
 
 ## Post-MVP Ideas
 
