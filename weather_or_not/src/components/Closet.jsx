@@ -7,9 +7,12 @@ export default function Categories () {
   const [category, setCategory] = useState(null)
   let navigate = useNavigate()
 
-    const editItem = (itemId) => {
+  const editItem = (itemId) => {
+  navigate(`/edititem/${itemId}`)
+  }
 
-    navigate(`/edititem/${itemId}`)
+  const addItem = () => {
+    navigate('/additem')
   }
 
 useEffect(()=>{
@@ -35,6 +38,7 @@ if(!category) {
         <div>
         <div className='categoryName'>
       <h2>{category.name}</h2>
+      <button onClick={()=> editItem()}>+</button>
         </div>
         <div>
       {category.item.map((item) => (

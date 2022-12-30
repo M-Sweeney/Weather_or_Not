@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react"
+import axios from "axios"
+import { useParams } from "react-router-dom"
 
 export default function EditItem() {
-  const { itemId } = useParams();
-  const [item, setItem] = useState(null);
+  const { itemId } = useParams()
+  const [item, setItem] = useState(null)
   const [formValues, setFormValues] = useState({
     name: "",
     description: "",
@@ -16,11 +16,11 @@ export default function EditItem() {
     rain: false,
     snow: false,
     wind: false,
-  });
+  })
 
   useEffect(() => {
     const getItem = async () => {
-      const response = await axios.get(`http://localhost:8000/item/${itemId}`);
+      const response = await axios.get(`http://localhost:8000/item/${itemId}`)
       setItem(response.data)
       console.log(response.data)
       setFormValues({
@@ -34,31 +34,31 @@ export default function EditItem() {
         rain: response.data.rain,
         snow: response.data.snow,
         wind: response.data.wind,
-      });
-    };
+      })
+    }
 
-    getItem();
-  }, [itemId]);
+    getItem()
+  }, [itemId])
 
   const handleChange = (event) => {
-    const { name, value, type, checked } = event.target;
+    const { name, value, type, checked } = event.target
     setFormValues({
       ...formValues,
       [name]: type === "checkbox" ? checked : value,
-    });
-  };
+    })
+  }
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    const response = await axios.patch(
-      `http://localhost:8000/item/${itemId}/`,
-      formValues
-    );
-    setItem(response.data);
-  };
+    event.preventDefault()
+    const response = await axios.post(
+      `http://localhost:8000/itemupdate/${itemId}`,
+      formValues,
+    )
+    setItem(response.data)
+  }
 
   if (!item) {
-    return <h2>Loading item...</h2>;
+    return <h2>Loading item...</h2>
   } else {
     return (
       <form onSubmit={handleSubmit}>
@@ -144,6 +144,6 @@ export default function EditItem() {
           <br />
           <button type="submit">Save changes</button>
         </form>
-      );
+      )
     }
   }
