@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import axios from 'axios'
 
 export default function Categories () {
 
-  const [category, setItem] = useState(null)
+  const [category, setCategory] = useState(null)
+  let navigate = useNavigate()
 
+    const editItem = (itemId) => {
+
+    navigate(`/edititem/${itemId}`)
+  }
 
 useEffect(()=>{
   const getCategory = async () =>{
   const response = await axios.get('http://localhost:8000/category/')
 
-  setItem(response.data)
-  console.log(response.data[0])
+  setCategory(response.data)
   }
 
   getCategory()
@@ -20,7 +25,7 @@ useEffect(()=>{
 
 
 if(!category) {
-  return <h2>Loading Dashboard</h2>
+  return <h2>Loading Closet</h2>
 }else{
   return(
     <div className='container'>
@@ -37,6 +42,7 @@ if(!category) {
           <div className="card">
           <h3>{item.name}</h3>
             <p>{item.description}</p>
+            <button onClick={()=> editItem(item.id)}>edit</button>
           </div>
         </div>
         ))}
