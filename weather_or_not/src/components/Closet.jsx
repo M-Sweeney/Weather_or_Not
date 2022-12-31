@@ -38,7 +38,7 @@ if(!category) {
         <div>
         <div className='categoryName'>
       <h2>{category.name}</h2>
-      <button onClick={()=> editItem()}>+</button>
+      <button onClick={()=> addItem()}>+</button>
         </div>
         <div>
       {category.item.map((item) => (
