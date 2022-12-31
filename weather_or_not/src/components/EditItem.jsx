@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 
 export default function EditItem() {
   const { itemId } = useParams()
@@ -55,6 +55,10 @@ export default function EditItem() {
       formValues,
     )
     setItem(response.data)
+  }
+
+  const handleDelete = async () => {
+    await axios.delete(`http://localhost:8000/item/${itemId}`)
   }
 
   if (!item) {
@@ -143,6 +147,9 @@ export default function EditItem() {
           <br />
           <br />
           <button type="submit">Save changes</button>
+          <Link to="/closet">
+          <button onClick={handleDelete}>Delete</button>
+          </Link>
         </form>
       )
     }
