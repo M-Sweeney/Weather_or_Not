@@ -43,10 +43,10 @@ if(!category) {
         <div>
       {category.item.map((item) => (
         <div className="grid">
-          <div className="card">
+          <div className="card" onClick={()=> editItem(item.id)}>
           <h3>{item.name}</h3>
             <p>{item.description}</p>
-            <button onClick={()=> editItem(item.id)}>edit</button>
+            {/* <button onClick={()=> editItem(item.id)}>edit</button> */}
           </div>
         </div>
         ))}
