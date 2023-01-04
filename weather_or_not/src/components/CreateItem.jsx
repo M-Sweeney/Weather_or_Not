@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "react-router-dom"
 import axios from "axios"
 
 export default function AddItem() {
@@ -115,7 +116,9 @@ export default function AddItem() {
               />
           <br />
           <br />
+          <Link to="/closet">
           <button type="submit">Save changes</button>
+          </Link>
         </form>
       )
     }

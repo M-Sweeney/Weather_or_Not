@@ -84,17 +84,23 @@ if(averageTemp > 85){
 
 let condition
 let conditionReport
+let conditionRecommendation
 
 if (weather.rain >= .1){
   conditionReport = `with ${weather.rain}inch(es) of rain.`
   condition = `rain`
+  conditionRecommendation = ` and the expected ${condition},`
 } else if (weather.snow >= .1){
   conditionReport = `with ${weather.snow}inch(es) snow.`
   condition = `snow`
+  conditionRecommendation = ` and the expected ${condition},`
 } else if (weather.wind >= 21){
   conditionReport = `with windspeeds of ${weather.wind}mph.`
   condition = `wind`
-} else{ conditionReport = "."}
+  conditionRecommendation = ` and the expected ${condition},`
+} else{ conditionReport = "."
+conditionRecommendation = ``
+}
 
 
 
@@ -136,7 +142,7 @@ if(!weather || !user) {
 
     <h2>Today in {user.city} it will be fairly {temp} with a high of {weather.highTemperature}° and a low of {weather.lowTemperature}° {conditionReport}</h2>
 
-    <h2>Based on those weather conditions I would recommend dressing for the {temp} temperature with - and dressing for the conditions with - item- </h2>
+    <h2>Based on the {temp} weather{conditionRecommendation} we have curated a list of items from your closet.</h2>
 
   {user.item.map((item) => {
     // console.log(item[temp])
