@@ -82,8 +82,8 @@ if(averageTemp > 85){
   temp = `cold`
 }
 
-let condition; 
-let conditionReport;
+let condition
+let conditionReport
 
 if (weather.rain >= .1){
   conditionReport = `with ${weather.rain}inch(es) of rain.`
@@ -138,22 +138,22 @@ if(!weather || !user) {
 
     <h2>Based on those weather conditions I would recommend dressing for the {temp} temperature with - and dressing for the conditions with - item- </h2>
 
-    {user.item.map((item) => {
-      console.log(item[temp])
-      if(item[temp] === true){
+  {user.item.map((item) => {
+    // console.log(item[temp])
+    if(item[temp] === true){
         return(
         <div>
           <h3>{item.name}</h3>
         </div>
 )}})}
 
-{user.item.map((item) => {
-      console.log(item[condition])
-      if(item[condition] === true){
-        return(
-        <div>
-          <h3>{item.name}</h3>
-        </div>
+  {user.item.map((item) => {
+    // console.log(item[condition])
+    if(item[condition] === true){
+      return(
+      <div>
+        <h3>{item.name}</h3>
+      </div>
 )}})}
 
     </div>
