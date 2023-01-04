@@ -45,23 +45,20 @@ useEffect(()=>{
   const response = await axios.get('http://localhost:8000/user/')
 
   setUser(response.data[0])
+  // console.log(user)
   }
   getUser()
-  console.log(user)
 
 
 }, [])
 
-useEffect(()=> {
-  console.log(user)
 // hotItems = user.item.filter(item => item.hot)
 // warmItems = user.item.filter(item => item.warm)
 // coolItems = user.item.filter(item => item.cool)
-// coldItems = user.item.filter(item => item.cold)
+// let coldItems = user.item.filter(item => item.cold)
 // rainItems = user.item.filter(item => item.rain)
 // snowItems = user.item.filter(item => item.snow)
 // windItems = user.item.filter(item => item.wind)
-}, [user])
 
 
 function average(num1, num2) {
@@ -70,7 +67,7 @@ function average(num1, num2) {
 
 let averageTemp = average(weather.highTemperature, weather.lowTemperature)
 
-let temp;
+let temp
 
 if(averageTemp > 85){
   temp = `hot`
@@ -107,7 +104,7 @@ conditionRecommendation = ``
 // let tempItems;
 
 // if (temp == `cold`){
-//   tempItems = hotItems
+//   tempItems = coldItems
 // }
 //   else if(temp == "warm"){
 //   tempItems = warmItems
@@ -133,17 +130,19 @@ conditionRecommendation = ``
 if(!weather || !user) {
   return <h2>Loading Dashboard</h2>
 }else{
-  // console.log(user)
+  console.log(user)
   // console.log(coldItems)
   // console.log(tempItems)
   return(
     <div className="dashboardContainer">
-    <h1>Good Morning {user.name}!</h1>
+    <h1 className="title">Good Morning {user.name}!</h1>
 
     <h2>Today in {user.city} it will be fairly {temp} with a high of {weather.highTemperature}° and a low of {weather.lowTemperature}° {conditionReport}</h2>
 
     <h2>Based on the {temp} weather{conditionRecommendation} we have curated a list of items from your closet.</h2>
 
+
+    <h2>items recommended by the {temp} temperature:</h2>
   {user.item.map((item) => {
     // console.log(item[temp])
     if(item[temp] === true){
@@ -153,14 +152,21 @@ if(!weather || !user) {
         </div>
 )}})}
 
-  {user.item.map((item) => {
-    // console.log(item[condition])
-    if(item[condition] === true){
-      return(
+
+
+{condition && (
+  <h2>items recommended by the {condition}:</h2>
+)}
+{user.item.map((item) => {
+  if (item[condition] === true) {
+    return (
       <div>
         <h3>{item.name}</h3>
       </div>
-)}})}
+    )
+  }
+})}
+
 
     </div>
   )

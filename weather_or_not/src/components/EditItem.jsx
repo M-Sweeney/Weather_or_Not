@@ -146,8 +146,8 @@ export default function EditItem() {
               />
           <br />
           <br />
-          <button type="submit">Save changes</button>
           <Link to="/closet">
+          <button type="submit">Save changes</button>
           <button onClick={handleDelete}>Delete</button>
           </Link>
         </form>
