@@ -69,8 +69,12 @@ export default function EditItem() {
     return <h2>Loading item...</h2>
   } else {
     return (
+      <div className="formcontainer">
       <form onSubmit={handleSubmit}>
+        <div className="inputfields">
+        <div className="charfield">
         <label htmlFor="name">Name:</label>
+        <br/>
         <input
           type="text"
           name="name"
@@ -79,6 +83,7 @@ export default function EditItem() {
         />
         <br />
         <label htmlFor="description">Description:</label>
+        <br/>
         <textarea
           name="description"
           value={formValues.description}
@@ -86,13 +91,16 @@ export default function EditItem() {
         />
         <br />
         <label htmlFor="photo">Photo URL:</label>
+        <br/>
         <input
           type="text"
           name="photo"
           value={formValues.photo}
           onChange={handleChange}
         />
+        </div>
         <br />
+        <div className="checkboxes">
         <label htmlFor="hot">Hot weather:</label>
         <input
           type="checkbox"
@@ -148,11 +156,18 @@ export default function EditItem() {
                 checked={formValues.wind}
                 onChange={handleChange}
               />
-          <br />
-          <br />
-          <button type="submit">Save changes</button>
-          <button onClick={handleDelete}>Delete</button>
-        </form>
+          </div>
+          </div>
+          <div className="buttoncontainer">
+          <button className="crudbutton" type="submit">Save changes</button>
+          <button className="crudbutton" onClick={handleDelete}>Delete</button>
+          </div>
+          </form>
+        </div>
       )
     }
   }
+
+
+
+

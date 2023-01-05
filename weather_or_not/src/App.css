@@ -135,9 +135,30 @@ ul {
 
 .activitycontainer{
   padding: 1em;
-  /* border-bottom: 3px solid rgba(192, 192, 192, 0.5); */
   background-color: lightgray;
   margin: 1em;
+}
+
+.buttoncontainer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.crudbutton {
+  display: flex;
+  background-color: white; /* Set the background color */
+  color: black; /* Set the text color */
+  padding: 10px 15px; /* Add some padding */
+  border: solid black;
+  cursor: pointer; /* Add a cursor on hover */
+  font-size: 16px; /* Increase the font size */
+  border-radius: 4px; /* Add some rounded corners */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add a drop shadow */
+  margin: auto;
+}
+
+.crudbutton:hover {
+  background-color: darkblue; /* Change the background color on hover */
 }
 
 .button-80 {
@@ -202,4 +223,36 @@ ul {
 
 .button-80:not(:disabled):active {
   transform: translateY(.125rem);
+}
+
+.formcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+  margin-top: 5%;
+  padding-bottom: 5%;
+  border-radius: 7%;
+  font-weight: bold;
+}
+
+.inputfields{
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  margin: 3em;
+}
+
+.checkboxes{
+  margin-top: 2em;
+}
+
+label{
+  margin-bottom: 10px;
 }

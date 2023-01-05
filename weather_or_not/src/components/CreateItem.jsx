@@ -38,8 +38,12 @@ export default function AddItem() {
   }
 
     return (
+      <div className="formcontainer">
       <form onSubmit={handleSubmit}>
+        <div className="inputfields">
+        <div className="charfield">
         <label htmlFor="name">Name:</label>
+        <br/>
         <input
           type="text"
           name="name"
@@ -48,6 +52,7 @@ export default function AddItem() {
         />
         <br />
         <label htmlFor="description">Description:</label>
+        <br/>
         <textarea
           name="description"
           value={formValues.description}
@@ -55,13 +60,16 @@ export default function AddItem() {
         />
         <br />
         <label htmlFor="photo">Photo URL:</label>
+        <br/>
         <input
           type="text"
           name="photo"
           value={formValues.photo}
           onChange={handleChange}
         />
+        </div>
         <br />
+        <div className="checkboxes">
         <label htmlFor="hot">Hot weather:</label>
         <input
           type="checkbox"
@@ -117,9 +125,12 @@ export default function AddItem() {
                 checked={formValues.wind}
                 onChange={handleChange}
               />
-          <br />
-          <br />
-          <button type="submit">Save changes</button>
+              
+          </div>
+          </div>
+          <br/>
+          <button className="crudbutton" type="submit">Save</button>
         </form>
+        </div>
       )
     }
