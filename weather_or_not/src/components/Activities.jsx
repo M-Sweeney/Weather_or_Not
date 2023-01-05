@@ -11,7 +11,6 @@ useEffect(()=>{
   const response = await axios.get('http://localhost:8000/activity/')
 
   setActivity(response.data)
-  // console.log(response.data)
   }
 
   getactivity()

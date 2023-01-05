@@ -24,7 +24,6 @@ export default function EditItem() {
     const getItem = async () => {
       const response = await axios.get(`http://localhost:8000/item/${itemId}`)
       setItem(response.data)
-      // console.log(response.data)
       setFormValues({
         name: response.data.name,
         description: response.data.description,

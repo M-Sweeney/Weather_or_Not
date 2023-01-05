@@ -26,39 +26,20 @@ useEffect(()=>{
   })
   
 }
-// console.log(weather)
-
   getData()
 
 }, [])
-
-// let hotItems = null
-// let warmItems = null
-// let coolItems = null
-// let coldItems = null
-// let rainItems = null
-// let snowItems = null
-// let windItems = null
 
 useEffect(()=>{
   const getUser = async () =>{
   const response = await axios.get('http://localhost:8000/user/')
 
   setUser(response.data[0])
-  // console.log(user)
   }
   getUser()
 
 
 }, [])
-
-// hotItems = user.item.filter(item => item.hot)
-// warmItems = user.item.filter(item => item.warm)
-// coolItems = user.item.filter(item => item.cool)
-// let coldItems = user.item.filter(item => item.cold)
-// rainItems = user.item.filter(item => item.rain)
-// snowItems = user.item.filter(item => item.snow)
-// windItems = user.item.filter(item => item.wind)
 
 
 function average(num1, num2) {
@@ -103,42 +84,11 @@ if (weather.rain >= .1){
 conditionRecommendation = ``
 }
 
-
-
-// let tempItems;
-
-// if (temp == `cold`){
-//   tempItems = coldItems
-// }
-//   else if(temp == "warm"){
-//   tempItems = warmItems
-// } else if(temp == "cool"){
-//   tempItems = coolItems
-// } else{
-//   tempItems = coldItems
-// }
-
-// let conditionItems;
-
-// if (condition == "rain"){
-//   conditionItems = rainItems
-// } else if(condition == "snow"){
-//   conditionItems = snowItems
-// } else if(condition == "wind"){
-//   conditionItems = windItems
-// } else{
-  
-// }
-
-
 if(!weather || !user) {
   return <h2>Loading Dashboard</h2>
 }else{
-  // console.log(user)
-  // console.log(coldItems)
-  // console.log(tempItems)
   return(
-    <div className="dashboardContainer">
+    <div className="dashboardContainer rounded-xl">
     <h1 className="dashboardtitle">Good Morning {user.name}!</h1>
 
     <h2 className="dashboardtext">Today in {user.city} it will be fairly {temp} with a high of {weather.highTemperature}° and a low of {weather.lowTemperature}° {conditionReport}</h2>

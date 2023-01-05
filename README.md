@@ -4,6 +4,8 @@
 
 ## Made by: [Matt Sweeney](https://www.linkedin.com/in/sweeney-matt/)
 
+### [Backend repo](https://github.com/M-Sweeney/Weather_or_Not_Backend)
+
 ### [Trello Board](https://trello.com/b/5nSNxpUd/weather-or-not)
 
 ### [Figma with Component Hierarhcy Diagram and ERD](https://www.figma.com/file/w6BoFPOl4QDWDJzLAOiZpx/Weather-Or-Not?node-id=0%3A1&t=BcHqcYUPKi91zsXQ-1)
