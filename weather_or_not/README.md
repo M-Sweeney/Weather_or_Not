@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+![image](assets/banner.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Weather Or Not
 
-## Available Scripts
+## Made by: [Matt Sweeney](https://www.linkedin.com/in/sweeney-matt/)
 
-In the project directory, you can run:
+### [Backend repo](https://github.com/M-Sweeney/Weather_or_Not_Backend)
 
-### `npm start`
+### [Trello Board](https://trello.com/b/5nSNxpUd/weather-or-not)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### [Figma with Component Hierarhcy Diagram and ERD](https://www.figma.com/file/w6BoFPOl4QDWDJzLAOiZpx/Weather-Or-Not?node-id=0%3A1&t=BcHqcYUPKi91zsXQ-1)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Description
 
-### `npm test`
+Weather Or Not is the app that acts as a clothing and accessory database that will also review the weather forecast for the day and help you determine weather or not you are prepared!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Weather or not is going to be pulling from a [third-party API](https://open-meteo.com/en/docs) to show the forecast for the day. Based on this forecast it will recommend items from your closet to ensure you are prepared for all weather conditions you may encounter. 
 
-### `npm run build`
+## How to Get Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Create a user and log in
+- Enter your city
+- Review the autofilled items in your closet and make edits where needed.
+- review the autofilled activities and make edits where needed.
+- review the weather for the day to make sure you are prepared!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This site will be built using Django/Python on the backend and React, Javascript and CSS on the frontend. The site will be using the below models and React components. Full CRUD operations (POST, GET, PUT, DELETE) will be implemented on at least one model.
 
-### `npm run eject`
+I will also be using Flowbite for as a technology I have never used. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Models
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- User
+- Items
+- Activities
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Components
 
-## Learn More
+- App.js
+- Header.jsx
+- Main.jsx
+- Home.jsx
+- Closet.jsx
+- Activities.jsx
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### [Figma with Component Hierarhcy Diagram and ERD](https://www.figma.com/file/w6BoFPOl4QDWDJzLAOiZpx/Weather-Or-Not?node-id=0%3A1&t=BcHqcYUPKi91zsXQ-1)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](assets/Wireframes.png)
 
-### Code Splitting
+![image](assets/ERD&CHD.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Post-MVP Ideas
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Add Auth
