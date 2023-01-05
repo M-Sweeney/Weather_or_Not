@@ -128,8 +128,8 @@ export default function AddItem() {
           </div>
           </div>
           <br/>
-        </form>
           <button className="crudbutton" type="submit">Save</button>
+        </form>
         </div>
       )
     }

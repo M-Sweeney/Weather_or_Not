@@ -32,7 +32,7 @@ if(!category) {
 }else{
   return(
     <div>
-            <button class="button-80" role="button" onClick={()=> addItem()}>+Add Item</button>
+      <button class="button-80" role="button" onClick={()=> addItem()}>+Add Item</button>
     <div className='container'>
 
 {
