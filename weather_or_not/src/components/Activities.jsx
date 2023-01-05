@@ -26,9 +26,11 @@ if(!activity) {
     <div className='container'>
 {
       activity.map((activity)=>(
-        <div className='activitycontainer'>
-      <h2 className="activitytitle">{activity.name}</h2>
-      <h4>{activity.description}</h4>
+        <div className='activitycontainer rounded-xl'>
+        <div className="cardactivitytitle rounded-t-xl">
+          <h2 className="activitytitle">{activity.name}</h2>
+        </div>
+          <h4 className="activitydescription">{activity.description}</h4>
         </div>
       ))}
     </div>

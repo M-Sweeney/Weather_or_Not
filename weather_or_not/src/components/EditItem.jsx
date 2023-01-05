@@ -62,7 +62,7 @@ export default function EditItem() {
 
   const handleDelete = async () => {
     await axios.delete(`http://localhost:8000/item/${itemId}`)
-    // navigate('/closet')
+    navigate('/closet')
   }
 
   if (!item) {
@@ -158,11 +158,11 @@ export default function EditItem() {
               />
           </div>
           </div>
+          </form>
           <div className="buttoncontainer">
           <button className="crudbutton" type="submit">Save changes</button>
           <button className="crudbutton" onClick={handleDelete}>Delete</button>
           </div>
-          </form>
         </div>
       )
     }

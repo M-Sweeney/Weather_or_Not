@@ -1,3 +1,8 @@
+body{
+  /* background-color: #E6F4F1; */
+  color: #002A63;
+}
+
 .banner{
   width: 100%;
   margin: 0;
@@ -8,14 +13,14 @@
   font-weight: 700;
   display: flex;
   justify-content: space-evenly;
-  background-color: #F6A7B5;
+  background-color: #138BD2;
   padding: .25em;
   margin-top: -4px;
 }
 
 .nav a{
   text-decoration: none;
-  color: #d11d53;
+  color: white;
 }
 
 .nav a:hover{
@@ -29,7 +34,6 @@
   font-size: 35px;
   font-weight: bolder;
   padding-top: 5%;
-  /* text-decoration: underline solid rgba(192, 192, 192, 0.5); */
 }
 
 .dashboardtitle{
@@ -55,7 +59,8 @@
   align-items: center;
   justify-content: space-around;
   padding-top: 3em;
-  background-color: lightgrey;
+  background-color: #e6e8e9;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
   padding-top: 10px;
   margin-left: 10%;
   margin-right: 10%;
@@ -106,12 +111,14 @@ ul {
 }
 
 .card{
+  /* text-align: center; */
   padding: 1em;
-  padding-top: 2em;
+  /* padding-top: 2em; */
   padding-bottom: 2em;
   width: 17em;
+  height: 10em;
   max-height: fit-content;
-  background-color: #FCDCD1;
+  background-color: #e6e8e9;
   border-radius: 0.5em;
   margin: 1em;
   justify-content: space-around;
@@ -119,56 +126,103 @@ ul {
   font-family: 'Georgia';
   cursor: pointer;
   transition: .5s;
+  position: relative;
 }
 
 .card:hover{
   transform: scale(1.05);
 }
 
-.activitytitle{
-  display: flex;
-  justify-content: center;
-  padding-bottom: .5em;
-  font-size: 35px;
+.cardtitle{
+  position: absolute;
+  height: 3em;
+  width: 17em;
+  background-color: #002A63;
+  color: white;
+  top: 0;
+  left: 0;
+}
+
+.itemname{
+  text-align: center;
+  font-size: 25px;
   font-weight: bolder;
+  margin-bottom: 1em;
+  /* text-decoration: underline; */
+  /* background-color: #E6F4F1; */
+}
+
+.itemdescription{
+  /* font-weight: bold; */
+  margin-top: 3em;
 }
 
 .activitycontainer{
   padding: 1em;
-  background-color: lightgray;
+  padding-left: 3em;
+  padding-right: 3em;
+  background-color: #e6e8e9;
   margin: 1em;
+  position: relative;
+  height: 13.5em;
+  width: 65em;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
+}
+
+.activitytitle{
+  text-align: center;
+  font-size: 35px;
+  font-weight: bolder;
+  margin-bottom: 1em;
+  padding: .20em;
+}
+
+.activitydescription{
+  margin-top: 4em;
+}
+
+.cardactivitytitle{
+  position: absolute;
+  height: 4em;
+  width: 65em;
+  background-color: #002A63;
+  color: white;
+  top: 0;
+  left: 0;
 }
 
 .buttoncontainer{
   display: flex;
   justify-content: space-between;
+  gap: 3em;
 }
 
 .crudbutton {
   display: flex;
-  background-color: white; /* Set the background color */
-  color: black; /* Set the text color */
-  padding: 10px 15px; /* Add some padding */
-  border: solid black;
-  cursor: pointer; /* Add a cursor on hover */
-  font-size: 16px; /* Increase the font size */
-  border-radius: 4px; /* Add some rounded corners */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add a drop shadow */
+  background-color: #e6e8e9;
+  color: #002A63; 
+  padding: 10px 15px; 
+  border: solid #002A63;
+  cursor: pointer; 
+  font-size: 16px; 
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
   margin: auto;
+  transition: .5s;
 }
 
 .crudbutton:hover {
-  background-color: darkblue; /* Change the background color on hover */
+  transform: scale(1.05);
 }
 
 .button-80 {
-  background: #fff;
+  background: #358C83;
   backface-visibility: hidden;
   border-radius: .375rem;
   border-style: solid;
   border-width: .125rem;
   box-sizing: border-box;
-  color: #212121;
+  color: white;
   cursor: pointer;
   display: inline-block;
   font-family: Circular,Helvetica,sans-serif;
@@ -235,11 +289,12 @@ ul {
 form{
   display: flex;
   flex-direction: column;
-  background-color: lightgrey;
+  background-color: #e6e8e9;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
   margin-top: 5%;
-  padding-bottom: 5%;
   border-radius: 7%;
   font-weight: bold;
+  margin-bottom: 2em;
 }
 
 .inputfields{
@@ -253,6 +308,3 @@ form{
   margin-top: 2em;
 }
 
-label{
-  margin-bottom: 10px;
-}

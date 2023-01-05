@@ -45,8 +45,10 @@ if(!category) {
       {category.item.map((item) => (
         <div key={item.id}>
           <div className="card" onClick={()=> editItem(item.id)}>
-          <h3>{item.name}</h3>
-            <p>{item.description}</p>
+          <div className="cardtitle rounded-t-xl">
+          <h1 className="itemname">{item.name}</h1>
+          </div>
+            <p className="itemdescription">{item.description}</p>
           </div>
         </div>
         ))}

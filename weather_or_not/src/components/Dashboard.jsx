@@ -83,6 +83,10 @@ let condition
 let conditionReport
 let conditionRecommendation
 
+// let condition ='rain'
+// let conditionReport = `with 5inch(es) of rain.`
+// let conditionRecommendation = ` and the expected rain,`
+
 if (weather.rain >= .1){
   conditionReport = `with ${weather.rain}inch(es) of rain.`
   condition = `rain`
@@ -143,7 +147,7 @@ if(!weather || !user) {
 
     <div class="mapcontainer">
     <div class="map">
-    <h2 className="recommendedtitle">items recommended by the {temp} temperature:</h2>
+    <h2 className="recommendedtitle">items recommended for the {temp} temperature:</h2>
   {user.item.map((item) => {
     
     if(item[temp] === true){
@@ -158,7 +162,7 @@ if(!weather || !user) {
 
 <div class="map">
 {condition && (
-  <h2 className="recommendedtitle">items recommended by the {condition}:</h2>
+  <h2 className="recommendedtitle">items recommended for the {condition}:</h2>
 )}
 {user.item.map((item) => {
   if (item[condition] === true) {
@@ -173,7 +177,6 @@ if(!weather || !user) {
 })}
     </div>
     </div>
-
     </div>
   )
 }}
