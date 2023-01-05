@@ -116,9 +116,9 @@ export default function AddItem() {
               />
           <br />
           <br />
-          <Link to="/closet">
+          {/* <Link to="/closet"> */}
           <button type="submit">Save changes</button>
-          </Link>
+          {/* </Link> */}
         </form>
       )
     }

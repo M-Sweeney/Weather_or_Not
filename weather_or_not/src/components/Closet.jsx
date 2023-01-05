@@ -35,14 +35,14 @@ if(!category) {
 
 {
       category.map((category)=>(
-        <div>
+        <div key={category.id}>
         <div className='title'>
       <h2>{category.name}</h2>
       <button onClick={()=> addItem()}>+</button>
         </div>
         <div className="grid">
       {category.item.map((item) => (
-        <div>
+        <div key={item.id}>
           <div className="card" onClick={()=> editItem(item.id)}>
           <h3>{item.name}</h3>
             <p>{item.description}</p>

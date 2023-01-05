@@ -130,7 +130,7 @@ conditionRecommendation = ``
 if(!weather || !user) {
   return <h2>Loading Dashboard</h2>
 }else{
-  console.log(user)
+  // console.log(user)
   // console.log(coldItems)
   // console.log(tempItems)
   return(
@@ -144,10 +144,11 @@ if(!weather || !user) {
 
     <h2>items recommended by the {temp} temperature:</h2>
   {user.item.map((item) => {
+    
     // console.log(item[temp])
     if(item[temp] === true){
         return(
-        <div>
+        <div key={item.id}>
           <h3>{item.name}</h3>
         </div>
 )}})}
@@ -160,7 +161,7 @@ if(!weather || !user) {
 {user.item.map((item) => {
   if (item[condition] === true) {
     return (
-      <div>
+      <div key={item.id}>
         <h3>{item.name}</h3>
       </div>
     )

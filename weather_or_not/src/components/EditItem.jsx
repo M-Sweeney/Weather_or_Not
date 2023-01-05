@@ -146,10 +146,10 @@ export default function EditItem() {
               />
           <br />
           <br />
-          <Link to="/closet">
+          {/* <Link to="/closet"> */}
           <button type="submit">Save changes</button>
           <button onClick={handleDelete}>Delete</button>
-          </Link>
+          {/* </Link> */}
         </form>
       )
     }
