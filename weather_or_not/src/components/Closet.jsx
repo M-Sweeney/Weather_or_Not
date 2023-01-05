@@ -31,6 +31,8 @@ if(!category) {
   return <h2>Loading Closet</h2>
 }else{
   return(
+    <div>
+            <button class="button-80" role="button" onClick={()=> addItem()}>+Add Item</button>
     <div className='container'>
 
 {
@@ -38,7 +40,6 @@ if(!category) {
         <div key={category.id}>
         <div className='title'>
       <h2>{category.name}</h2>
-      <button onClick={()=> addItem()}>+</button>
         </div>
         <div className="grid">
       {category.item.map((item) => (
@@ -53,6 +54,7 @@ if(!category) {
       </div>
     </div>
       ))}
+    </div>
     </div>
   )
 }}

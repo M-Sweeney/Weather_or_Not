@@ -1,8 +1,10 @@
 import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
 import axios from "axios"
 
 export default function AddItem() {
+  let navigate = useNavigate()
   const [item, setItem] = useState(null)
   const [formValues, setFormValues] = useState({
     name: "",
@@ -30,7 +32,8 @@ export default function AddItem() {
     const response = await axios.post(
       `http://localhost:8000/itempost/`,
       formValues
-    )
+      )
+      navigate('/closet')
     setItem(response.data)
   }
 
@@ -116,9 +119,7 @@ export default function AddItem() {
               />
           <br />
           <br />
-          {/* <Link to="/closet"> */}
           <button type="submit">Save changes</button>
-          {/* </Link> */}
         </form>
       )
     }

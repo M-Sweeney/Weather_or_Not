@@ -79,7 +79,7 @@ if(averageTemp > 85){
   temp = `cold`
 }
 
-let condition
+let condition 
 let conditionReport
 let conditionRecommendation
 
@@ -135,39 +135,44 @@ if(!weather || !user) {
   // console.log(tempItems)
   return(
     <div className="dashboardContainer">
-    <h1 className="title">Good Morning {user.name}!</h1>
+    <h1 className="dashboardtitle">Good Morning {user.name}!</h1>
 
-    <h2>Today in {user.city} it will be fairly {temp} with a high of {weather.highTemperature}° and a low of {weather.lowTemperature}° {conditionReport}</h2>
+    <h2 className="dashboardtext">Today in {user.city} it will be fairly {temp} with a high of {weather.highTemperature}° and a low of {weather.lowTemperature}° {conditionReport}</h2>
 
-    <h2>Based on the {temp} weather{conditionRecommendation} we have curated a list of items from your closet.</h2>
+    <h2 className="dashboardtext">Based on the {temp} weather{conditionRecommendation} we have curated a list of items from your closet.</h2>
 
-
-    <h2>items recommended by the {temp} temperature:</h2>
+    <div class="mapcontainer">
+    <div class="map">
+    <h2 className="recommendedtitle">items recommended by the {temp} temperature:</h2>
   {user.item.map((item) => {
     
-    // console.log(item[temp])
     if(item[temp] === true){
         return(
         <div key={item.id}>
-          <h3>{item.name}</h3>
+        <ul>
+          <li><h3>{item.name}</h3></li>
+        </ul>
         </div>
 )}})}
+</div>
 
-
-
+<div class="map">
 {condition && (
-  <h2>items recommended by the {condition}:</h2>
+  <h2 className="recommendedtitle">items recommended by the {condition}:</h2>
 )}
 {user.item.map((item) => {
   if (item[condition] === true) {
     return (
       <div key={item.id}>
-        <h3>{item.name}</h3>
+        <ul>
+          <li><h3>{item.name}</h3></li>
+        </ul>
       </div>
     )
   }
 })}
-
+    </div>
+    </div>
 
     </div>
   )

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
-import { useParams, Link } from "react-router-dom"
 
 export default function EditItem() {
+  let navigate = useNavigate()
   const { itemId } = useParams()
   const [item, setItem] = useState(null)
   const [formValues, setFormValues] = useState({
@@ -22,7 +24,7 @@ export default function EditItem() {
     const getItem = async () => {
       const response = await axios.get(`http://localhost:8000/item/${itemId}`)
       setItem(response.data)
-      console.log(response.data)
+      // console.log(response.data)
       setFormValues({
         name: response.data.name,
         description: response.data.description,
@@ -54,11 +56,13 @@ export default function EditItem() {
       `http://localhost:8000/itemupdate/${itemId}`,
       formValues,
     )
+    navigate('/closet')
     setItem(response.data)
   }
 
   const handleDelete = async () => {
     await axios.delete(`http://localhost:8000/item/${itemId}`)
+    // navigate('/closet')
   }
 
   if (!item) {
@@ -146,10 +150,8 @@ export default function EditItem() {
               />
           <br />
           <br />
-          {/* <Link to="/closet"> */}
           <button type="submit">Save changes</button>
           <button onClick={handleDelete}>Delete</button>
-          {/* </Link> */}
         </form>
       )
     }
