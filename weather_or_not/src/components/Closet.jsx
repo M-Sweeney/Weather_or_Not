@@ -37,7 +37,7 @@ if(!category) {
 
 {
       category.map((category)=>(
-        <div key={category.id}>
+        <div className="gridcontainer" key={category.id}>
         <div className='title'>
       <h2>{category.name}</h2>
         </div>

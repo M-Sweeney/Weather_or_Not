@@ -26,8 +26,8 @@ if(!activity) {
     <div className='container'>
 {
       activity.map((activity)=>(
-        <div className='activityName'>
-      <h2 className="title">{activity.name}</h2>
+        <div className='activitycontainer'>
+      <h2 className="activitytitle">{activity.name}</h2>
       <h4>{activity.description}</h4>
         </div>
       ))}
