@@ -28,7 +28,7 @@ Weather or not is going to be pulling from a [third-party API](https://open-mete
 
 This site will be built using Django/Python on the backend and React, Javascript and CSS on the frontend. The site will be using the below models and React components. Full CRUD operations (POST, GET, PUT, DELETE) will be implemented on at least one model.
 
-I will also be using Flowbite for as a technology I have never used. 
+I will also be using Tailwind for as a technology that wasn't covered in class. 
 
 
 ## Models
